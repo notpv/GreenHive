@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login | GreenHive</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="../static/logo.jpeg">
+</head>
+<body>
+    <section>
+        <div class="form-container">
+            <h1>welcome to greenhive!</h1>
+            <form action="/login" method="post">
+                <div class="control">
+                    <label for="username" class="lol">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="control">
+                    <label for="pwd" class="lol">Password</label>
+                    <input type="password" name="pwd" id="pwd" placeholder="Enter your password" required>
+                </div>
+                <span class="lol"><input type="checkbox"> Remember Me</span>
+                <div class="control">
+                    <input type="submit" value="LOGIN">
+                </div>
+                <h3>{{info}}</h3>
+            </form>
+            <form action="/register" method="post">
+                <div class="link">
+                    <a href="/register">New User? Register Here</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
