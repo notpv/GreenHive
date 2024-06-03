@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | GreenHive</title>
+    <link rel="stylesheet" href="../static/stylelo.css">
+    <link rel="shortcut icon" href="../static/logo.jpeg">
+</head>
+<body>
+    <header>
+        <div id="top-header">
+            <img src="../static/logo.jpeg" width="150" height="100">
+            <nav>
+                <ul>
+                    <li class="active">
+                        <form action="/" method="post">
+                            <div>
+                                <a href="/">Home</a>
+                            </div>
+                        </form> 
+                    </li>
+                    <li>
+                        <form action="/loginback" method="post">
+                            <div>
+                                <a href="/loginback">{{login}}</a>
+                            </div>
+                        </form> 
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Image menu in Header to contain an Image and
+            a sample text over that image -->
+        <div id="header-image-menu">
+        </div>
+    </header>
+    <div class="form-container">
+        <h1>Please log-in to access all features</h1>
+        <a href="/login"><button class="login-button">Login</button></a>
+    </div>
+</body>
+</html>

@@ -21,27 +21,30 @@
             </div>
             <div id="right-part">
                 <div id="ip-fields">
-                    <div class="field-top">
-                        <label for="username">Username: </label><br>
-                        <input type="text" class="ip-field" placeholder="Enter your username" id="username">
-                    </div>
-                    <div class="field">
-                        <label for="pwd">Password:</label><br>
-                        <input type="password" class="ip-field" placeholder="Enter your password" id="pwd">
-                    </div>
-                    <div class="field">
-                        <label for="confirm-pwd">Confirm Password: </label><br>
-                        <input type="password" class="ip-field" placeholder="Retype your password" id="confirm-pwd">
-                    </div>
-                    <div class="field">
-                        <label for="location">Location: </label><br>
-                        <input type="text" class="ip-field" placeholder="Enter your location" id="location">
-                    </div>
-                    <div class="field">
-                        <label for="contact-num">Contact Number: </label><br>
-                        <input type="text" class="ip-field" placeholder="Retype your contact number" id="contact-num">
-                    </div>
-                    <button class="register-btn">Register</button>
+                    <form method="post">
+                        <div class="field-top">
+                            <label for="username">Username: </label><br>
+                            <input type="text" class="ip-field" placeholder="Enter your username" id="username" name="username">
+                        </div>
+                        <div class="field">
+                            <label for="pwd">Password:</label><br>
+                            <input type="password" class="ip-field" placeholder="Enter your password" id="pwd" name="pwd">
+                        </div>
+                        <div class="field">
+                            <label for="confirm-pwd">Confirm Password: </label><br>
+                            <input type="password" class="ip-field" placeholder="Retype your password" id="confirm-pwd" name="confirm-pwd">
+                        </div>
+                        <div class="field">
+                            <label for="location">Location: </label><br>
+                            <input type="text" class="ip-field" placeholder="Enter your location" id="location" name="location">
+                        </div>
+                        <div class="field">
+                            <label for="contact-num">Contact Number: </label><br>
+                            <input type="text" class="ip-field" placeholder="Retype your contact number" id="contact-num" name="contact-num">
+                        </div>
+                        <input type="submit" class="register-btn" value="Register">
+                        <h3>{{error}}</h3>
+                    </form>
                 </div>
             </div>
         </div>

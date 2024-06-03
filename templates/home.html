@@ -11,20 +11,14 @@
 
     
 <header>
-	<!-- Top header menu containing
-		logo and Navigation bar -->
 	<div id="top-header">
-		<!-- Logo -->
-		<div id="logo">
-		
-		</div>
         <img src="../static/logo.jpeg" width="150" height="100">
 		<nav>
 			<ul>
 				<li class="active">
-					<form action="/homeback" method="post">
+					<form action="/" method="post">
                         <div>
-                            <a href="/homeback">Home</a>
+                            <a href="/">Home</a>
                         </div>
                     </form> 
 				</li>
@@ -47,7 +41,7 @@
 		    	<li>
 					<form action="/loginback" method="post">
                         <div>
-                            <a href="/loginback">Login</a>
+                            <a href="/loginback">{{login}}</a>
                         </div>
                     </form> 
 				</li>
