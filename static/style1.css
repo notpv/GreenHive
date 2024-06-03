@@ -1,0 +1,162 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../static/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container1 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    left:0;
+    
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    padding: 50px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    
+}
+
+img{
+    top: 30px;
+    left: 20px;
+    position: absolute;
+}
+
+.logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    float: right;
+}
+main{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    border-radius: 100px;
+    margin:200px;
+}
+nav ul {
+    list-style: none;
+    margin: 10px;
+    margin-right: 70px;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+    margin:10px;
+    font-family: "Open Sans";
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav li:hover{
+    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff5f5;
+    border-radius: 20px;
+    margin:10px;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.hero {
+    text-align: center;
+    color: #ffffff;
+    margin: 100px;
+}
+
+.hero h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+    font-family: "Open Sans";
+    transition: transform 0.3s ease-in-out;
+}
+.hero h1:hover{
+    transform: scale(1.1);
+}
+
+.hero p {
+    font-size: 40px;
+    line-height: 1.5;
+    font-family: "Open Sans";
+    transition: transform 0.3s ease-in-out;
+}
+.hero p:hover{
+    transform: scale(1.1);
+}
+
+
+.counter {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: "Open Sans";
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: "Open Sans";
+}
+
+.stat {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+    font-family: "Open Sans";
+}
+
+.number {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: "Open Sans";
+}
+
+.text {
+    font-size: 22px;
+    color: #aaa;
+    font-family: "Open Sans";
+}
+
+
+footer {
+    background-color: #386641;
+    text-align: center;
+    position:fixed;
+    width:100%;
+    bottom:0px;
+    font-size: 20px;
+    height:80px;
+    line-height: 2px;
+}
+

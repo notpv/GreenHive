@@ -1,0 +1,67 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #C0C0C0;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    background-image: url('../static/leafne.webp');
+	background-size: cover;
+}
+
+.container {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+	max-width: 1400px;
+}
+
+h1 {
+	color: #386641;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+	font-family: "Open Sans";
+	font-size: 70px;
+  
+}
+
+.search-section {
+	margin: 20px 0;
+}
+
+input {
+	width: 70%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+button {
+	background-color: #6A994E;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-family: "Open Sans";
+}
+
+button:hover {
+	background-color: #BC4749;
+}
+
+footer1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+	
+.opportunities {
+	margin: 20px 0;
+	text-align: left;
+}

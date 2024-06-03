@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans";
+    box-sizing: border-box;
+}    
+    
+a {
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    background-image: url(../static/leaf.jpg);
+    background-size: cover;
+}
+
+#feed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.feed-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.feed-heading span{
+    color: #A7C957;
+    font-size: 30px;
+}
+.feed-heading h3{
+    font-size: 5rem;
+    color: #F2E8CF;
+    font-weight: 600;
+}
+
+.feed-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+
+}
+.feed-box{
+    width: 350px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+.feed-box:hover{
+    transform: scale(1.1);
+}
+.feed-img{
+    width: 100%;
+    height: auto;
+}
+.feed-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.feed-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.feed-text span{
+    color: #BC4749;
+    font-size: 0.9rem;
+}
+
+
+
+
+.feed-text .feed-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color:black;
+}
+.feed-text .feed-title:hover{
+    color: #BC4749;
+    transition: all ease 0.3s;
+}
+.feed-text p{
+    color:#6A994E;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.feed-text a{
+    color:black;
+}
+.feed-text a:hover{
+    color:#BC4749;
+    transition: all ease 0.3s;
+}
+
