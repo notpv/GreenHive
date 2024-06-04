@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect
 from flask_pymongo import PyMongo
 
 app = Flask(__name__)
@@ -8,14 +8,32 @@ db = mongo.db
 app.secret_key = 'SECRET_KEY'
 logged_in = False
 
-@app.route("/", methods = ['GET'])
+@app.route("/", methods = ['GET', 'POST'])
 def Home():
     logged_in = session.get('logged_in', False)
     if logged_in:
-        print(logged_in)
         status = "Sign Out"
     else:
         status = "Login"
+    if request.method == 'POST':
+        if logged_in:
+            print("Logged in")
+            session.pop('logged_in', None)
+            return redirect('/login')
+        else:
+            print("Logged out")
+            status = "Login"
+            return redirect('/login')
+
+    # logged_in = session.get('logged_in', False)
+    # login_logout = request.form.get("login-logout")
+    # if login_logout.value == 'Login':
+    #     print("Logged in")
+    # elif login_logout.value == 'Sign Out':
+    #     print(logged_in, "signing out")
+    #     status = "Sign Out"
+    # else:
+    #     status = "Login"
     return render_template("home.html", login=status)
 
 @app.route("/login", methods = ['GET','POST'])
@@ -46,7 +64,6 @@ def login():
         return render_template("index.html", info=info)
     return render_template("index.html", info=info)
 
-
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     print("you re on register")
@@ -67,7 +84,7 @@ def register():
         #     error = 'Username already exists.'
         if error == "":
             db.accounts.insert_one({"username": username, "password": pwd, "location": location, "contact-number": con_no})
-            error = "Registeration successful!"
+            return render_template('index.html', info="Registeration successful!")
             # Securely hash password before storing
             # hashed_password = generate_password_hash(pwd)
             # database[username] = hashed_password  # Update sample database (replace with actual storage)

@@ -16,14 +16,14 @@
 		<nav>
 			<ul>
 				<li class="active">
-					<form action="/" method="post">
+					<form action="/">
                         <div>
                             <a href="/">Home</a>
                         </div>
                     </form> 
 				</li>
                 <li>
-                    <form action="/search" method="post">
+                    <form action="/search">
                         <div>
                             <a href="/search">Volunteer</a>
                         </div>
@@ -31,7 +31,7 @@
                 </li>
 				
                 <li>
-					<form action="/feed" method="post">
+					<form action="/feed">
                         <div>
                             <a href="/feed">Feed</a>
                         </div>
@@ -39,9 +39,9 @@
 				</li>
                 
 		    	<li>
-					<form action="/loginback" method="post">
+					<form action="/" method="post">
                         <div>
-                            <a href="/loginback">{{login}}</a>
+                            <input type="submit" name="login-logout" id="login-logout" value="{{login}}" class="login-logout">
                         </div>
                     </form> 
 				</li>
@@ -82,13 +82,7 @@
                     </div>
                 </section>
                 <script src="../static/script.js"></script>
-                
-
-            
-                
         </section>
-        
     </main>
-   
 </body>
 </html>
