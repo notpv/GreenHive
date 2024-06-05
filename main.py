@@ -24,16 +24,6 @@ def Home():
             print("Logged out")
             status = "Login"
             return redirect('/login')
-
-    # logged_in = session.get('logged_in', False)
-    # login_logout = request.form.get("login-logout")
-    # if login_logout.value == 'Login':
-    #     print("Logged in")
-    # elif login_logout.value == 'Sign Out':
-    #     print(logged_in, "signing out")
-    #     status = "Sign Out"
-    # else:
-    #     status = "Login"
     return render_template("home.html", login=status)
 
 @app.route("/login", methods = ['GET','POST'])
@@ -53,14 +43,6 @@ def login():
             session['logged_in'] = logged_in
             logged_in = True
             return render_template("home.html", login="Sign Out")
-
-
-        # if username in database.keys() and pwd in database.values():
-        #     return render_template("home.html", html_var = username)
-        # elif username not in database.keys():
-        #     return render_template("index.html",info="Invalid Username!")
-        # else:
-        #     return render_template("index.html",info="Invalid Password!")
         return render_template("index.html", info=info)
     return render_template("index.html", info=info)
 
@@ -80,14 +62,9 @@ def register():
         if pwd != confirm_password:
             print("what")
             error = 'Passwords do not match.'
-        # elif username in users:
-        #     error = 'Username already exists.'
         if error == "":
             db.accounts.insert_one({"username": username, "password": pwd, "location": location, "contact-number": con_no})
             return render_template('index.html', info="Registeration successful!")
-            # Securely hash password before storing
-            # hashed_password = generate_password_hash(pwd)
-            # database[username] = hashed_password  # Update sample database (replace with actual storage)
     return render_template('register.html', error=error)
 
 
@@ -106,16 +83,6 @@ def search():
     if not logged_in:
         return render_template('loggedout.html')
     return render_template('search.html', error=error)
-
-@app.route('/loginback',methods=['GET','POST'])
-def loginback():
-    error = None
-    return render_template('index.html', error=error)
-
-@app.route('/homeback',methods=['GET','POST'])
-def homeback():
-    error = None
-    return render_template('home.html', error=error)
 
 if __name__ == "__main__":
     app.run(debug= True)
